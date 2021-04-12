@@ -43,6 +43,7 @@ $(document).ready(function () {
         });
     });
 });
+
 // active manu
 $(window).scroll(function () {
     var scrollDistance = $(window).scrollTop();
@@ -55,6 +56,11 @@ $(window).scroll(function () {
         }
     });
 }).scroll();
+
+// rotate toggle class
+$('.rotate_element').click(function () {
+    $('.rotate').toggleClass('rotate_change');
+});
 
 // type js
 var typed = new Typed('.element', {

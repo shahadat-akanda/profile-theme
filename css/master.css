@@ -86,26 +86,87 @@
 }
 /* navbar section end */
 /* rotate start */
-.rotate {
+.rotate .rotate_element {
   position: fixed;
-  top: 200px;
-  left: 0;
+  top: 144px;
+  left: 0px;
   z-index: 9900;
-}
-.rotate a {
   background: none repeat scroll 0 0 #2b2424;
   box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.08);
   display: block;
   height: 41px;
   width: 40px;
-  padding: 9px;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  transition: all 0.3s linear 0s;
 }
-.rotate a i {
+.rotate .rotate_element a {
+  padding: 9px;
+}
+.rotate .rotate_element i {
   font-size: 20px;
   color: #fff;
+  line-height: 40px;
   -webkit-animation: rotation 2s infinite linear;
+}
+.rotate .change_color {
+  background: #fff;
+  box-shadow: 0px 0px 14px 0 rgba(0, 0, 0, 0.08);
+  position: fixed;
+  left: -189px;
+  top: 19%;
+  width: 189px;
+  z-index: 9000;
+  padding: 10px 20px;
+  transition: all 0.3s linear 0s;
+}
+.rotate .change_color h3 {
+  font-size: 16px;
+  margin: 8px 3px 12px;
+}
+.rotate .change_color ul {
+  list-style: none;
+  margin: 0 0 0;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 0;
+}
+.rotate .change_color ul li {
+  float: left;
+  margin: 2px;
+}
+.rotate .change_color ul li a {
+  cursor: pointer;
+  display: block;
+  height: 35px;
+  width: 35px;
+  border-radius: 16px 16px 0;
+  margin: 5px;
+}
+.rotate .change_color ul li .color1 {
+  background: #e65f78;
+}
+.rotate .change_color ul li .color2 {
+  background: #37b8df;
+}
+.rotate .change_color ul li .color3 {
+  background: #31b164;
+}
+.rotate .change_color ul li .color4 {
+  background: #5d69f6;
+}
+.rotate .change_color ul li .color5 {
+  background: #87ceeb;
+}
+.rotate .change_color ul li .color6 {
+  background: #f2b31a;
+}
+
+.rotate_change .rotate_element {
+  left: 189px;
+}
+.rotate_change .change_color {
+  left: 0;
 }
 
 @-webkit-keyframes rotation {

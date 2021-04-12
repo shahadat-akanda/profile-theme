@@ -98,27 +98,90 @@
 }
 /* navbar section end */
 
-
 /* rotate start */
 .rotate {
-    position: fixed;
-    top: 200px;
-    left: 0;
-    z-index: 9900;
-    a {
+    .rotate_element {
+        a {
+            padding: 9px;
+        }
+        position: fixed;
+        top: 144px;
+        left: 0px;
+        z-index: 9900;
         background: none repeat scroll 0 0 #2b2424;
         box-shadow: 2px 2px 0 0 rgb(0 0 0 / 8%);
         display: block;
         height: 41px;
-        width: 40px;
-        padding: 9px;
+        width: 40px;        
         border-top-right-radius: 5px;
         border-bottom-right-radius: 5px;
+        transition: all .3s linear 0s;
         i {
             font-size: 20px;
             color: $secondary_color;
+            line-height: 40px;
             -webkit-animation: rotation 2s infinite linear;
         }
+    }
+    .change_color {
+        background: $secondary_color;
+        box-shadow: 0px 0px 14px 0 rgb(0 0 0 / 8%);
+        position: fixed;
+        left: -189px;
+        top: 19%;
+        width: 189px;
+        z-index: 9000;
+        padding: 10px 20px;
+        transition: all .3s linear 0s;
+        h3 {
+            font-size: 16px;
+            margin: 8px 3px 12px;
+        }
+        ul {
+            list-style: none;
+            margin: 0 0 0;
+            overflow: hidden;
+            padding: 0;
+            border-radius: 0;
+            li {
+                float: left;
+                margin: 2px;
+                a {
+                    cursor: pointer;
+                    display: block;
+                    height: 35px;
+                    width: 35px;
+                    border-radius: 16px 16px 0;
+                    margin: 5px;
+                }
+                .color1 {
+                    background: $primary_color;
+                }
+                .color2 {
+                    background: #37b8df;
+                }
+                .color3 {
+                    background: #31b164;
+                }
+                .color4 {
+                    background: #5d69f6;
+                }
+                .color5 {
+                    background: #87ceeb;
+                }
+                .color6 {
+                    background: #f2b31a;
+                }
+            }
+        }
+    }
+}
+.rotate_change {
+    .rotate_element {
+        left: 189px;
+    }
+    .change_color {
+        left: 0;
     }
 }
 @-webkit-keyframes rotation {
