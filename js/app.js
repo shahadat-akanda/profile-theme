@@ -18,6 +18,17 @@ btn.on('click', function (e) {
     $('html, body').animate({ scrollTop: 0 }, '900');
 });
 
+// Trick Fixed Navbar
+$(window).scroll(function () {
+    var scroll = $(window).scrollTop();
+    if (scroll > 100) {
+        $('.navbar').addClass('bg-scrolling');
+    }
+
+    else {
+        $('.navbar').removeClass('bg-scrolling');
+    }
+})
 
 // smooth scrolling js
 $(document).ready(function () {
@@ -48,12 +59,12 @@ $(window).scroll(function () {
 // type js
 var typed = new Typed('.element', {
     strings: [
+        'A Front end Developer.',
         'A Graphic Designer.',
         'A Photograper.'
     ],
     typeSpeed: 100,
     loop: true,
-    smartBackspace: true // Default value
 });
 
 // swiper js

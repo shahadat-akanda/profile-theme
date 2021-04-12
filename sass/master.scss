@@ -29,12 +29,17 @@
     position: fixed;
     top: 0;
     left: 0;
-    background-color: $secondary_color;
+    background-color: transparent;
     z-index: 9990;
     width: 100%;
+    transition: all 0.5s;
     .navbar-brand {
+        color: $secondary_color;
         font-size: 28px;
         font-weight: 700;
+        &:hover {
+            color: $secondary_color;
+        }
     }
     .navbar-nav {
         .nav-item {
@@ -44,6 +49,7 @@
                 line-height: 24px;
                 transition: all 0.5s;
                 font-weight: 500;
+                color: $secondary_color;
                 &:hover {
                     color: $primary_color;
                 }
@@ -51,8 +57,44 @@
         }
     }
 }
+.navbar-light {
+    .navbar-toggler {
+        background-color: rgba(211, 123, 123, 0.5);
+    }
+}
+
+.bg-scrolling {
+    background-color: $secondary_color;
+    .navbar-brand {
+        color: #000;
+        &:hover {
+            color: #000;
+        }
+    }
+    .navbar-nav {
+        .nav-item {
+            .nav-link {
+                color: #000;
+            }
+        }
+    }
+    .navbar-toggler {
+        background-color: $secondary_color;
+    }
+}
 .navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
     color: $primary_color;
+}
+
+@media screen and (max-width: 992px) {
+    .navbar-nav {
+        width: 50px;
+    }
+}
+@media screen and (max-width: 767px) {
+    .navbar-nav {
+        width: 50px;
+    }
 }
 /* navbar section end */
 
@@ -118,7 +160,7 @@
                     font-size: 28px;
                 }
                 h1 {
-                    font-size: 54px;
+                    font-size: 52px;
                     font-weight: 700;
                     margin: 12px 0px 20px;
                 }
@@ -217,7 +259,7 @@
             .banner_element {
                 .banner_content {
                     h1 {
-                        font-size: 40px;
+                        font-size: 38px;
                     }
                 }
             }
@@ -230,7 +272,7 @@
             .banner_element {
                 .banner_content {
                     h1 {
-                        font-size: 30px;
+                        font-size: 28px;
                     }
                 }
             }
@@ -245,6 +287,7 @@
     margin-top: 150px;
     .about_image {
         padding: 5px;
+        margin-bottom: 30px;
         background-color: $secondary_color;
         border: 1px solid #dee2e6;
         border-radius: 5px;
@@ -570,6 +613,18 @@
                     .image_overleaf {
                         opacity: 1;
                     }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .work_section {
+        .work_content {
+            .button-group {
+                .button {
+                    margin-right: 0px;
                 }
             }
         }

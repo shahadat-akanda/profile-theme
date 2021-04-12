@@ -25,13 +25,18 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  background-color: transparent;
   z-index: 9990;
   width: 100%;
+  transition: all 0.5s;
 }
 .navbar .navbar-brand {
+  color: #fff;
   font-size: 28px;
   font-weight: 700;
+}
+.navbar .navbar-brand:hover {
+  color: #fff;
 }
 .navbar .navbar-nav .nav-item .nav-link {
   font-size: 15px;
@@ -39,15 +44,46 @@
   line-height: 24px;
   transition: all 0.5s;
   font-weight: 500;
+  color: #fff;
 }
 .navbar .navbar-nav .nav-item .nav-link:hover {
   color: #e65f78;
+}
+
+.navbar-light .navbar-toggler {
+  background-color: rgba(211, 123, 123, 0.5);
+}
+
+.bg-scrolling {
+  background-color: #fff;
+}
+.bg-scrolling .navbar-brand {
+  color: #000;
+}
+.bg-scrolling .navbar-brand:hover {
+  color: #000;
+}
+.bg-scrolling .navbar-nav .nav-item .nav-link {
+  color: #000;
+}
+.bg-scrolling .navbar-toggler {
+  background-color: #fff;
 }
 
 .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show > .nav-link {
   color: #e65f78;
 }
 
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    width: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    width: 50px;
+  }
+}
 /* navbar section end */
 /* rotate start */
 .rotate {
@@ -113,7 +149,7 @@
   font-size: 28px;
 }
 .banner_section .banner_overlay .banner_element .banner_content h1 {
-  font-size: 54px;
+  font-size: 52px;
   font-weight: 700;
   margin: 12px 0px 20px;
 }
@@ -225,12 +261,12 @@
 
 @media screen and (max-width: 992px) {
   .banner_section .banner_overlay .banner_element .banner_content h1 {
-    font-size: 40px;
+    font-size: 38px;
   }
 }
 @media screen and (max-width: 767px) {
   .banner_section .banner_overlay .banner_element .banner_content h1 {
-    font-size: 30px;
+    font-size: 28px;
   }
 }
 /* banner section end */
@@ -240,6 +276,7 @@
 }
 .about_section .about_image {
   padding: 5px;
+  margin-bottom: 30px;
   background-color: #fff;
   border: 1px solid #dee2e6;
   border-radius: 5px;
@@ -540,6 +577,11 @@
   opacity: 1;
 }
 
+@media screen and (max-width: 767px) {
+  .work_section .work_content .button-group .button {
+    margin-right: 0px;
+  }
+}
 /* work section end */
 /* blog section start */
 .blog_section {
